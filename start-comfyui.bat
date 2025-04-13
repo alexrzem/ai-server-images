@@ -1,0 +1,1 @@
+docker compose -f ./comfyui/docker-compose-comfyui.yaml up

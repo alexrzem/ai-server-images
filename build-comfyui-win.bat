@@ -1,0 +1,1 @@
+docker build -f ./comfyui/Dockerfile.nvidia -t rzem.ai/comfyui/win:nvidia .
