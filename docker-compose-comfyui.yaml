@@ -1,0 +1,27 @@
+services:
+    comfyui:
+        image: comfyui:mac-arm
+        platform: linux/arm64
+
+
+        ## For Nvidia GPU's - You probably want to uncomment this
+        #deploy:
+        #  resources:
+        #    reservations:
+        #      devices:
+        #        - driver: nvidia
+        #          count: all
+        #          capabilities: [gpu]
+
+        volumes:
+            - /Users/alex/Dev/Work/ai/models:/app/models
+            - /Users/alex/Dev/Work/ai/generated-images:/app/output
+
+        ports:
+            - 8188:8188
+
+#        environment:
+#            - LISTEN_PORT=8188
+#            - LISTEN_HOST=0.0.0.0
+
+# docker compose --file docker-compose-comfyui.yaml up
